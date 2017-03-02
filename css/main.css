@@ -15,7 +15,7 @@
 }
 #main-content{
 	padding:0 20px;
-	width:80%;
+	width:100%;
 	background-color: rgba(204, 204, 204, 0.25);
 }
 .ui.statistics > .statistic:before{
@@ -31,4 +31,16 @@
 }
 .chartData .ui.table tr td{
 	border-top:0px;
+}
+#parent div {
+    display:none;
+    position: relative;
+}
+#parent div:first-child {
+    display:block;
+}
+
+#parent > div{
+    width:100%;
+    height:100%;
 }
