@@ -1,7 +1,7 @@
 HMZAdminMgr = {};
-HMZAdminMgr.load = function(){
-	$('.ui.sidebar').sidebar();
-}
+// HMZAdminMgr.load = function(){
+// 	$('.ui.sidebar').sidebar();
+// }
 HMZAdminMgr.ramUsageChart = function(details){
 	    
 	    var ctx = document.getElementById('ramUsageChart');
@@ -29,7 +29,7 @@ HMZAdminMgr.ramUsageChart = function(details){
 		var defectDoughnutChart = new Chart(ctx, {
 			type: 'doughnut',
 			animation:{
-				animateScale:true
+				animateScale: true
 			},
 			data: data,
 			options: {
@@ -38,7 +38,8 @@ HMZAdminMgr.ramUsageChart = function(details){
 				}
 			}
 		});
-		$('#ramUsageChart').closest('table').find(".chartData").html(HMZAdminMgr.generateTabularData(data));
+		//$('#ramUsageChart').find(".chartData").html(HMZAdminMgr.generateTabularData(data));
+		$('.chartData1').html(HMZAdminMgr.generateTabularData(data));
 }
 HMZAdminMgr.renderNewAccountsChart = function(details){
 	    var ctx = document.getElementById('newAccountsChart');
@@ -150,7 +151,9 @@ HMZAdminMgr.renderDiscUsageChart = function(details){
 				}
 			}
 		});
-		$('#discUsageChart').closest('table').find(".chartData").html(HMZAdminMgr.generateTabularData(data));
+		// $('#discUsageChart').closest('table').find(".chartData").html(HMZAdminMgr.generateTabularData(data));
+		$('.chartData2').html(HMZAdminMgr.generateTabularData(data));
+
 }
 HMZAdminMgr.renderBandwidthUsageChart = function(details){
 	    var ctx = document.getElementById('bandwidthUsageChart');

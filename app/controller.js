@@ -11,10 +11,10 @@
     .module('HMZAdminApp')
     .controller('MainController', MainController);
 
-  MainController.$inject = ['site.config','QueryService','$rootScope','$timeout','$location','moment'];
+  MainController.$inject = ['site.config','QueryService','$rootScope','$timeout','$location','moment', '$interval', '$http'];
 
 
-  function MainController(SiteConfig, QueryService, $rootScope, $timeout, $location, moment) {
+  function MainController(SiteConfig, QueryService, $rootScope, $timeout, $location, moment, $interval, $http) {
 
     // 'controller as' syntax
     var self = this;
@@ -25,14 +25,23 @@
 	$rootScope.$emit('onLocationChangeSuccess', $location.$$path);
 	
 	
-	QueryService.queryDashboardData().then(function(response){
+	// $interval(function (){
+	// 	QueryService.queryDashboardData().then(function(response){
+	// 	HMZAdminMgr.ramUsageChart(response.data[0].ramreport);
+	// 	HMZAdminMgr.renderDiscUsageChart(response.data[0].discreport);
+	// 	HMZAdminMgr.renderBandwidthUsageChart(response.data[0].bandwidthreport);
+	// 	HMZAdminMgr.renderNewAccountsChart(response.data[0].newaccountsreport);
+	// 	$(".main-wrapper .pushable").removeClass("loading");
+	// 	});
+	// }, 1000);
+	$interval(function (){
+	$http.get("../rest/dashboard_back_end_response.json").then(function(response){
 		HMZAdminMgr.ramUsageChart(response.data[0].ramreport);
 		HMZAdminMgr.renderDiscUsageChart(response.data[0].discreport);
 		HMZAdminMgr.renderBandwidthUsageChart(response.data[0].bandwidthreport);
 		HMZAdminMgr.renderNewAccountsChart(response.data[0].newaccountsreport);
-		$(".main-wrapper .pushable").removeClass("loading");
 	});
-	
+}, 1000);
 	
 	
   }
