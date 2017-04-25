@@ -8,25 +8,25 @@
      <video width="100%" height="100%" preload="auto" autoplay="autoplay" loop> <source src="../images/blackholes.m4v#t=10,28" style="width:1350px; height:750px">
      </video>
    </div>
-  <div class="mySlides w3-animate-fading">
-     <h1 id="B1" style="display:none"><span>EINSTEIN’S GRAVITY</span></h1>
-   	 <h2 id="B2" style="display:none"><span>Gravity is the curvature of spacetime.</span></h2>
-   	 <h2 id="B3" style="display:none;left:1000px;top:500px"><span>matter curves spacetime...</panspan></h2>
-   	 <h2 id="B4" style="display:none;left:1000px;top:600px"><span>and spacetime tells matter</span></h2>
-   	 <h2 id="B5" style="display:none;left:1050px;top:700px"><span>how to move</span></h2>
-
-     <img id= "hi" src="../images/ein.jpg" style="position:absolute;"></img>
-     <img src="../images/A.jpg" style="width:100%; height:100%">
-
-   </div>
+  
     <div class="mySlides w3-animate-fading">
     	<div style="background:#080a09; height:1000px; width:100%; position:relative">
     		<img src="../images/B.jpg" style="position:absolute; width:700px; height:350px; top:500px; left:800px">
      	<h1><span>WHAT ARE GRAVITATIONAL WAVES?</span></h1>
-     	<h2 id="C1" style="display:none;left:300px;top:250px"><span>Gravitational waves are ripples in the </br>curvature of spacetime that are seen as waves at </br>the speed of light!</span><h2>
-     	<h4 id="C2" style="display:none;left:350px;top:600px"><span>Einstein actually theorized </br>gravitational waves back in1916 by his </br>Theory of Relativity!</span><h4>
-
+     	<h2 id="B1" style="display:none;left:300px;top:250px"><span>Gravitational waves are ripples in the </br>curvature of spacetime that are seen as waves at </br>the speed of light!</span><h2>
+     	<h4 id="B2" style="display:none;left:350px;top:600px"><span>Einstein actually theorized </br>gravitational waves back in1916 by his </br>Theory of Relativity!</span><h4>
    		</div>
+   </div>
+   <div class="mySlides w3-animate-fading">
+     <h1 id="C1" style="display:none"><span>EINSTEIN’S GRAVITY</span></h1>
+   	 <h2 id="C2" style="display:none"><span>Gravity is the curvature of spacetime.</span></h2>
+   	 <h2 id="C3" style="display:none;left:1000px;top:500px"><span>matter curves spacetime...</panspan></h2>
+   	 <h2 id="C4" style="display:none;left:1000px;top:600px"><span>and spacetime tells matter</span></h2>
+   	 <h2 id="C5" style="display:none;left:1050px;top:700px"><span>how to move</span></h2>
+
+     <img id= "hi" src="../images/ein.jpg" style="position:absolute;"></img>
+     <img src="../images/A.jpg" style="width:100%; height:100%">
+
    </div>
    <div class="mySlides w3-animate-fading">
     	<div style="background:#080a09; height:1000px; width:100%; position:relative">
@@ -90,18 +90,10 @@ function carousel() {
 	    setTimeout(carousel, 18000);  
 	    setTimeout(function(){document.getElementById("Evideo").play();}, 38000);
 	}
-   	else if (myIndex == 2){		//use this to set manual timing
+    else if (myIndex == 2){		//use this to set manual timing
 
-    	$("#hi").animate({
-            left: '1000px',
-            height: '250px',
-            width: '250px',
-        }, 1000);
         $("#B1").delay(1500).fadeIn();
-        $("#B2").delay(2500).fadeIn();
-        $("#B3").delay(3000).fadeIn();
-        $("#B4").delay(4000).fadeIn();
-        $("#B5").delay(4500).fadeIn();
+        $("#B2").delay(3500).fadeIn();
 
     	x[myIndex-1].style.display = "block";  
     	setTimeout(carousel, 7000);  
@@ -109,8 +101,16 @@ function carousel() {
     }
     else if (myIndex == 3){		//use this to set manual timing
 
+    	$("#hi").animate({
+            left: '1000px',
+            height: '250px',
+            width: '250px',
+        }, 1000);
         $("#C1").delay(1500).fadeIn();
-        $("#C2").delay(3500).fadeIn();
+        $("#C2").delay(2500).fadeIn();
+        $("#C3").delay(3000).fadeIn();
+        $("#C4").delay(4000).fadeIn();
+        $("#C5").delay(4500).fadeIn();
 
     	x[myIndex-1].style.display = "block";  
     	setTimeout(carousel, 7000);  
