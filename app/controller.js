@@ -34,14 +34,14 @@
 	// 	$(".main-wrapper .pushable").removeClass("loading");
 	// 	});
 	// }, 1000);
-	$interval(function (){
-	$http.get("../rest/dashboard_back_end_response.json").then(function(response){
-		HMZAdminMgr.ramUsageChart(response.data[0].ramreport);
-		HMZAdminMgr.renderDiscUsageChart(response.data[0].discreport);
-		HMZAdminMgr.renderBandwidthUsageChart(response.data[0].bandwidthreport);
-		HMZAdminMgr.renderNewAccountsChart(response.data[0].newaccountsreport);
-	});
-}, 1000);
+// 	$interval(function (){
+// 	$http.get("../rest/dashboard_back_end_response.json").then(function(response){
+// 		HMZAdminMgr.ramUsageChart(response.data[0].ramreport);
+// 		HMZAdminMgr.renderDiscUsageChart(response.data[0].discreport);
+// 		HMZAdminMgr.renderBandwidthUsageChart(response.data[0].bandwidthreport);
+// 		HMZAdminMgr.renderNewAccountsChart(response.data[0].newaccountsreport);
+// 	});
+// }, 1000);
 	
 	
   }
