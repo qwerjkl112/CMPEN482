@@ -124,15 +124,14 @@ interferometer</br> relative to the other.</span><h4>
       <img id="K8" src="../images/what3.jpg" style="display:none;position:fixed; width:60%; height:60%; top:25%; left:40%;">
       <img id="K9" src="../images/what4.jpg" style="display:none;position:fixed; width:50%; height:50%; top:30%; left:0%;">
    </div>
+   <div class="mySlides">
+      <h1 id="L1" style="left:5%"><span>SPECIAL THANKS TO:</span></h1>
+      <img id="L2" src="../images/thanks.png" style="display:none;position:fixed; width:100%; height:25%; top:25%; left:0%;">
+      <h2 id="L3" class="fadeintext" style="left:49%;top:55%"><span>AND</span></h2>
+      <h2 id="L4" class="fadeintext" style="left:20%;top:65%"><span>Penn State Science Gravitational Wave Camp</span></h2>
+      <h2 id="L5" class="fadeintext" style="left:30%;top:75%"><span>July 19, 2016 and July 21, 2016</span></h2>
 
-   
-    <!-- <div class="mySlides">
-     <img src="../images/3.jpg" style="width:1350px; height:750px">
    </div>
-   </div>
-    <div class="mySlides">
-     <img src="../images/4.jpg" style="width:1350px; height:750px">
-   </div> -->
 
 </div>
 <script>
@@ -291,6 +290,19 @@ function carousel() {
 
     	x[myIndex-1].style.display = "block";  
     	setTimeout(carousel, 19000); 
+   	}
+	else if (myIndex == 12){		//use this to set manual timing
+
+        $("#L1").delay(1500).fadeIn();
+        $("#L2").delay(3500).fadeIn();
+        $("#L3").delay(5500).fadeIn();
+	$("#L4").delay(7000).fadeIn();
+	$("#L5").delay(7000).fadeIn();
+
+
+
+    	x[myIndex-1].style.display = "block";  
+    	setTimeout(carousel, 10000); 
    	}
     else{    
 		x[myIndex-1].style.display = "block";  
