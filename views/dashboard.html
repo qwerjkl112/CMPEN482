@@ -9,7 +9,7 @@
      </video>
    </div>
   
-    <div class="mySlides w3-animate-fading">
+    <div class="mySlides">
     	<div style="background:#080a09; height:100%; width:100%; position:fixed;">
     		<img src="../images/B.jpg" style="position:fixed; width:50%; height:50%; top:50%; left:50%;">
      	<h1><span>WHAT ARE GRAVITATIONAL WAVES?</span></h1>
@@ -17,7 +17,7 @@
      	<h4 id="B2" class="fadeintext" style="left:20%;top:80%"><span>Einstein actually theorized </br>gravitational waves back in 1916 by his </br>Theory of Relativity!</span><h4>
    		</div>
    </div>
-   <div class="mySlides w3-animate-fading">
+   <div class="mySlides">
      <h1 id="C1" class="fadeintext"><span>EINSTEIN’S GRAVITY</span></h1>
    	 <h2 id="C2" class="fadeintext" style="left:0%;"><span>Gravity is the curvature of spacetime.</span></h2>
    	 <h2 id="C3" class="fadeintext" style="left:50%;top:50%"><span>matter curves spacetime...</panspan></h2>
@@ -27,7 +27,7 @@
      <img src="../images/A.jpg" style="width:100%; height:100%">
 
    </div>
-   <div class="mySlides w3-animate-fading">
+   <div class="mySlides">
     	<div style="background:#080a09; height:100%; width:100%; position:fixed">
      	<h1 style="left:25%;"><span>SO, HOW DOES IT WORK?</span></h1>
 
@@ -45,7 +45,7 @@
         transform: scaleX(-1);
         filter: FlipH;
         -ms-filter: "FlipH";">
-     	<h1 style="left:5%;"><span>Gravitational Waves - A little More Detailed</span></h1>
+     	<h1 style="left:5%;"><span>GRAVITATIONAL WAVES SOURCES</span></h1>
      	<video loop id="Evideo" width="50%" height="100%" style="position:fixed;left:49%;top:0%" preload="auto" autoplay="autoplay"> <source src="../images/waves.mp4#t=0,24"> </video>
      	<h2 id="E1" class="fadeintext" style="left:2%;top:40%"><span>The strongest gravitational waves</span><h2>
      	<h2 id="E2" class="fadeintext" style="left:4%;top:50%"><span>are produced by catastrophic </span><h2>
@@ -63,7 +63,7 @@
     		<img id="F3" src="../images/arrow.png" style="opacity:0.0;position:fixed; width:25%; height:10%; top:55%; left:0%;filter:invert(100%);">
      	<h1 style="left:0%"><span>GRAVITATIONAL WAVES - HOW DO WE FIND THEM?</span></h1>
      	<h2 id="F1" class="fadeintext" style="left:5%;top:30%"><span>If we can’t see gravitational</Fr> waves, then how can we</br>prove that they exist?</span><h2>
-     	<h2 id="F2" class="fadeintext" style="left:3%;top:70%;"><span>It was LIGO that finally found</br>evidence of gravitational waves</br>in September 14th, 2015!!</span><h2>
+     	<h2 id="F2" class="fadeintext" style="left:3%;top:70%;"><span>It was LIGO that finally found</br>evidence of gravitational waves</br>on September 14th, 2015!!</span><h2>
    		</div>
    </div>
     <div class="mySlides">
@@ -84,9 +84,9 @@
     		<img id="H4" src="../images/how2.jpg" style="opacity:0.0;position:fixed; width:5%; height:10%; top:40%; left:28%;">
     		<img id="H5" src="../images/how3.jpg" style="opacity:0.0;position:fixed; width:8%; height:5%; top:74%; left:23%;">
     		<video width="50%" height="50%" style="position:fixed;left:45%;top:25%;" preload="auto" autoplay="autoplay" loop>
-    		<source src="../images/Laser.m4v"></video>
+    		<source id="lasers" src="../images/Laser.m4v"></video>
      	<h1><span>LIGO – HOW DOES IT ALL WORK?</span></h1>
-     	<h4 id="H1" class="fadeintext" style="left:5%;top:25%"><span>The main of LIGO that is in charge of</br> detecting gravitational waves is the</br> Interferometer.</span><h2>
+     	<h4 id="H1" class="fadeintext" style="left:5%;top:25%"><span>The main component of LIGO that is in charge of</br> detecting gravitational waves is the</br> Interferometer.</span><h2>
      	<h4 id="H2" class="fadeintext" style="left:5%;top:80%;"><span>An Interferometer is an L-shaped</br> device that measures tiny changes in</br> length using light</span><h4>
      	<h4 id="H6" class="fadeintext" style="left:5%;top:80%;"><span>A passing gravitational wave will</br> stretch one arm of the
 interferometer</br> relative to the other.</span><h4>
@@ -158,7 +158,8 @@ function carousel() {
    		$("#A2").animate({opacity: '0.0'}, 1000);
    		x[myIndex-1].style.display = "block";  
 	    setTimeout(carousel, 18000);  
-	    setTimeout(function(){document.getElementById("Evideo").play();}, 38000);
+	    setTimeout(function(){document.getElementById("Evideo").play();}, 43500);
+	    setTimeout(function(){document.getElementById("lasers").play();}, 22000);
 	}
     else if (myIndex == 2){		//use this to set manual timing
 
@@ -166,7 +167,7 @@ function carousel() {
         $("#B2").delay(3500).fadeIn();
 
     	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 7000);  
+    	setTimeout(carousel, 9000);  
 
     }
     else if (myIndex == 3){		//use this to set manual timing
@@ -182,7 +183,7 @@ function carousel() {
         $("#C4").delay(4000).fadeIn();
 
     	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 7000);  
+    	setTimeout(carousel, 9000);  
 
     }
     else if(myIndex == 4){
@@ -190,9 +191,10 @@ function carousel() {
         $("#D2").delay(1500).fadeIn();
         $("#D3").delay(3000).fadeIn();
  		x[myIndex-1].style.display = "block";  
-	    setTimeout(carousel, 7000);   
+	    setTimeout(carousel, 9000);   
  	}
- 	else if(myIndex == 5){
+
+    else if(myIndex == 5){
     	$("#E1").delay(1500).fadeIn();
     	$("#E2").delay(3000).fadeIn();
     	$("#E3").delay(4500).fadeIn();
@@ -212,7 +214,7 @@ function carousel() {
 
 
     	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 7000); 
+    	setTimeout(carousel, 10000); 
    	}
   	else if (myIndex == 7){		//use this to set manual timing
 
@@ -225,7 +227,7 @@ function carousel() {
         $("#G7").delay(6500).fadeIn();
 
     	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 9000);  
+    	setTimeout(carousel, 13000);  
 
     }
     else if (myIndex == 8){		//use this to set manual timing
@@ -252,7 +254,7 @@ function carousel() {
         
 
       x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 8000); 
+      setTimeout(carousel, 10000); 
     }
    	else if (myIndex == 10){		//use this to set manual timing
 
@@ -266,7 +268,7 @@ function carousel() {
 
 
     	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 13000); 
+    	setTimeout(carousel, 17000); 
    	}
    	else if (myIndex == 11){		//use this to set manual timing
 
@@ -274,21 +276,21 @@ function carousel() {
         $("#K2").delay(2500).fadeIn();
         $("#K3").delay(3000).fadeIn();
         $("#K4").delay(3500).fadeIn();
-        $("#K1").delay(4500).fadeOut();
-        $("#K2").delay(3500).fadeOut();
-        $("#K3").delay(2000).fadeOut();
-        $("#K4").delay(2000).fadeOut();
+        $("#K1").delay(6500).fadeOut();
+        $("#K2").delay(5500).fadeOut();
+        $("#K3").delay(4000).fadeOut();
+        $("#K4").delay(4000).fadeOut();
 
-        $("#K5").delay(7000).fadeIn();
-        $("#K6").delay(8000).fadeIn();
-        $("#K7").delay(9000).fadeIn();
-        $("#K8").delay(10500).fadeIn();
-        $("#K9").delay(12000).fadeIn();
+        $("#K5").delay(9000).fadeIn();
+        $("#K6").delay(10000).fadeIn();
+        $("#K7").delay(11000).fadeIn();
+        $("#K8").delay(12500).fadeIn();
+        $("#K9").delay(14000).fadeIn();
 
 
 
     	x[myIndex-1].style.display = "block";  
-    	setTimeout(carousel, 13000); 
+    	setTimeout(carousel, 19000); 
    	}
     else{    
 		x[myIndex-1].style.display = "block";  
